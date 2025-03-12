@@ -10,17 +10,16 @@ window.onscroll = function() {
 // Initialize AOS animations
 window.onload = function () {
     AOS.init({
-      duration: 1800, // Animation duration in milliseconds
-      easing: 'ease-in-out', // Animation easing function
-      once: true, // Animation runs only once
-    // Start animation when element is 100px away from the viewport
+      duration: 1800, 
+      easing: 'ease-in-out', 
+      once: true,
     });
   };
 
 
 
   document.addEventListener("mousemove", (event) => {
-    const x = (event.clientX / window.innerWidth - 0.8) * 60; // Scale down movement
+    const x = (event.clientX / window.innerWidth - 0.8) * 60;
     document.querySelector(".carousel-inner").style.setProperty("--mouse-x", `${x}px`);
 });
 
